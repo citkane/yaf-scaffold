@@ -14,4 +14,4 @@ This is experimental software.
 - Admin frontend for administration of AUTH and permissions
 - Implementation of IDL with pub/sub and req/res patterns
 
-Please have a look at the <a href = "https://citkane.github.io/yaf-scaffold" target ="_blank">API documentation</a> if you want to explore this project.
+Please have a look at the [API documentation](https://citkane.github.io/yaf-scaffold) if you want to explore this project.
