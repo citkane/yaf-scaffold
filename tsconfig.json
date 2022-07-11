@@ -1,0 +1,15 @@
+{
+	"extends": "@yaf/tsconfig/commonjs.json",
+	"include": [
+		"src/index.ts",
+		"src/package.json",
+		"package.json"
+	],
+	"compilerOptions": {
+		"outDir": "./dist",
+	},
+	"references": [
+		{"path": "packages/lib"},
+		{"path": "packages/storage"}
+	]
+}

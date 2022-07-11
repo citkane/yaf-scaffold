@@ -1,0 +1,19 @@
+{
+	environment: 'test',
+    security: {
+        keys: {
+            keystorage:{
+                use: 'file',
+                file: {
+                    'location': 'tests/securityStore'
+                }
+            }
+        }
+    },
+    storage:{
+        sqlite:{
+            fileStore: './tests/tmp/securityStore/development'
+        }
+    },
+
+}

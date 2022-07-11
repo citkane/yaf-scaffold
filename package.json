@@ -1,0 +1,70 @@
+{
+  "name": "yaf-scaffold",
+  "version": "0.0.0",
+  "description": "The yaf microservice architecture",
+  "main": "src.index",
+  "workspaces": [
+    "packages/*",
+    "tsconfig",
+    "tests",
+    "src"
+  ],
+  "type": "commonjs",
+  "scripts": {
+    "build": "tsc --build && node ./tsconfig/postBuild",
+    "build:watch": "tsc --build --watch",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
+    "test:unit": "NODE_ENV=test nyc mocha ./tests/unit/unit.spec.ts",
+    "test:unit:watch": "NODE_ENV=test mocha --watch ./tests/unit/unit.spec.ts",
+    "tunnel": "npx localtunnel --port 5500"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mioScaffold/mioScaffold.git"
+  },
+  "author": "Michael Jonker",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mioScaffold/mioScaffold/issues"
+  },
+  "homepage": "https://github.com/mioScaffold/mioScaffold#readme",
+  "dependencies": {
+    "@yaf/lib": "*",
+    "@yaf/storage": "*",
+    "bcrypt": "^5.0.1",
+    "better-sqlite3": "^7.6.0",
+    "config": "^3.3.7",
+    "fs-extra": "^10.1.0",
+    "jose": "^4.8.1",
+    "node-rsa": "^1.1.1",
+    "yaf": "*"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/assert": "^1.5.6",
+    "@types/bcrypt": "^5.0.0",
+    "@types/better-sqlite3": "^7.5.0",
+    "@types/chai": "^4.3.1",
+    "@types/chai-as-promised": "^7.1.5",
+    "@types/config": "^0.0.41",
+    "@types/fs-extra": "^9.0.13",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "@yaf/testconfig": "*",
+    "@yaf/tsconfig": "*",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^8.19.0",
+    "localtunnel": "^2.0.2",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0",
+    "rewire": "^6.0.0",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.8.2",
+    "typedoc": "^0.23.2",
+    "typescript": "^4.7.4"
+  }
+}

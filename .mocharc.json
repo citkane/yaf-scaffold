@@ -1,0 +1,10 @@
+{
+	"watch-files": ["packages/**/*.ts", "tests/**/*.spec.ts"],
+	"delay": false,
+	"require": [
+		"ts-node/register/transpile-only",
+		"source-map-support/register"
+	],
+	"recursive": true,
+	"exit": false
+}

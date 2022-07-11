@@ -1,0 +1,9 @@
+securityStore
+node_modules
+build
+docs*
+coverage
+.nyc_output
+node_modules
+.vscode
+dist

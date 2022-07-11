@@ -1,0 +1,105 @@
+{
+    domain: 'yafApp',
+    environment: 'development',
+    services: {
+        yafAuth: {
+            storage: 'filesystem',
+            rest:{
+                https: false,
+                certs: {
+                    certbot: false,
+                    certbotEmail:'',
+                    privateKey:'',
+                    certificate:''
+                },
+                location: 'localhost',
+                port: 8900,
+                cors: {
+                    protected: {
+                        use: false,
+                        whitelist: []
+                    },
+                    public: {
+                        use: false,
+                        whitelist: []
+                    }
+                },
+                basicauth: {
+                    protected: {
+                        use: true,
+                        username: 'admin',
+                        password: 'public'
+                    },
+                    public:{
+                        use: false,
+                        username: '',
+                        password: ''
+                    }
+                }
+            },
+            allowedUserDomains: [
+                '@openpoint.ie'
+            ]
+        },
+        yafMail: {
+            smtp: {
+                host: '',
+                port: 465,
+                secure: true,
+                auth: {
+                    'user':'',
+                    'pass': ''
+                },
+                from: ''
+            }
+        }
+    },
+    security: {
+        jwt: {
+            algorithmASym: 'RS256',
+            tokenExpiry: {
+                service: '1 minute',
+                user:'2 days',
+                newpassword: '1 hour'
+            }
+        },
+        keys: {
+            algorithm: 'rsa',
+            modulusLength: 2048,
+            keyStorage:{
+                use: 'file',
+                file: {
+                    'location': 'securityStore'
+                },
+                sqllite: {},
+                sql: {}
+            }
+        },
+        hash: {
+            saltRounds: 10,
+        }
+    },
+    storage:{
+        sqlite:{
+            fileStore: './securityStore/development'
+        }
+    },
+    yafApp : {
+        /*
+        'BUS':{
+            'type':'mqtt',
+            'details': {
+                'tcp': 'tcp://localhost:1883',
+                'websocket': 'ws://localhost:8083',
+                'dashboard': 'http://localhost:18083',
+                'httpAdmin': {
+                    'api': 'http://localhost:8081/api/v4',
+                    'username': 'admin',
+                    'password': 'public'
+                }
+            }
+        },
+        */
+    }
+
+}
