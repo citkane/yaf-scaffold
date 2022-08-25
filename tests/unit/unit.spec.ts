@@ -3,7 +3,6 @@ if (process.env['NODE_ENV'] !== 'test') throw new Error(`Environment is not test
 import yaf from 'yaf';
 import { assert } from '@yaf/testconfig';
 
-
 describe('YAF unit testing', function(){
 	describe('CONFIGURATION', function () {		
 		it('The default configuration has loaded and is in test environment', function () {

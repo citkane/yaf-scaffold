@@ -13,8 +13,9 @@
   "scripts": {
     "build": "tsc --build && node ./tsconfig/postBuild",
     "build:watch": "tsc --build --watch",
-    "docs": "typedoc",
+    "docs": "node ./node_modules/.bin/typedoc",
     "docs:watch": "typedoc --watch",
+    "docs:theme": "node node_modules/typedoc-theme-yaf/src/docWatcher.js",
     "test:unit": "NODE_ENV=test nyc mocha ./tests/unit/unit.spec.ts",
     "test:unit:watch": "NODE_ENV=test mocha --watch ./tests/unit/unit.spec.ts",
     "tunnel": "npx localtunnel --port 5500"
@@ -64,7 +65,9 @@
     "rewire": "^6.0.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.8.2",
-    "typedoc": "^0.23.2",
+    "typedoc": "^0.23.10",
+    "typedoc-plugin-versions": "^0.0.4",
+    "typedoc-theme-yaf": "file:../typedoc-theme-yaf/dist",
     "typescript": "^4.7.4"
   }
 }

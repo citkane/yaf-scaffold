@@ -1,6 +1,7 @@
 {
 	"extends": "@yaf/tsconfig/commonjs.json",
 	"include": [
+		"*.ts",
 		"./**/*.ts",
 		"./package.json"
 	],

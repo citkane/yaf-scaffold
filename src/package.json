@@ -1,4 +1,7 @@
 {
 	"name": "yaf",
-	"main": "index"
+	"main": "index",
+	"typedoc": {
+        "entryPoint": "index.ts"
+    }
 }

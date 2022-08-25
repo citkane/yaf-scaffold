@@ -2,7 +2,7 @@
  * 
  * #### A library of base utilities as pure static functions
  * 
- * @module
+ * @module @yaf/lib
  */
 
 import path from 'path';

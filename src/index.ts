@@ -1,6 +1,6 @@
 /**
  * [[include:yaf.md]]
- * @module
+ * @module @yaf/scaffoldx
  * */
 
 import path from 'path';

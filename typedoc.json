@@ -2,8 +2,10 @@
 	"$schema": "https://typedoc.org/schema.json",
 	"out": "docs",
 	"entryPoints": [
-		"src/index.ts"
+		"./src",
+		"./packages/*"
 	],
+	"entryPointStrategy": "packages",
 	"externalPattern": [
 		"**/node_modules/**"
 	],
@@ -13,5 +15,10 @@
 	"readme": "./README.md",
 	"media": "./media",
 	"includes": "./mediaDocs",
-	"logLevel": "Verbose"
+	"logLevel": "Verbose",
+	"plugin": ["typedoc-theme-yaf", "typedoc-plugin-versions"],
+	"theme": "yaf",
+	"versions": {
+		"homeUrl": "http://localhost:3000/"
+	}
 }
